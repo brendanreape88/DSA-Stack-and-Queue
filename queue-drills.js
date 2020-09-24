@@ -38,3 +38,41 @@ class Queue {
     return node.value;
   }
 }
+
+function populateShip() {
+  const StarTrekQ = new Queue();
+  StarTrekQ.enqueue("Kirk");
+  StarTrekQ.enqueue("Spock");
+  StarTrekQ.enqueue("Uhura");
+  StarTrekQ.enqueue("Sulu");
+  StarTrekQ.enqueue("Checkov");
+  //peek(StarTrekQ);
+  //isEmpty(StarTrekQ);
+  display(StarTrekQ);
+}
+
+populateShip();
+
+function peek(ll) {
+  const first = ll.first;
+  console.log(first);
+}
+
+function isEmpty(ll) {
+  if (ll.first == null) {
+    console.log("is empty");
+  }
+}
+
+function display(ll) {
+  let currNode = ll.first;
+
+  if (currNode == null) {
+    return null;
+  }
+
+  while (currNode !== null) {
+    console.log(currNode.value);
+    currNode = currNode.next;
+  }
+}
